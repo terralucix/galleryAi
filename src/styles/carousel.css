@@ -1,0 +1,27 @@
+.swiper-button-next,
+.swiper-button-prev {
+  color: #FF3366 !important;
+  background: rgba(255, 255, 255, 0.1);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 1.2rem !important;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FF3366 !important;
+}
+
+.gallery-swiper {
+  padding: 2rem 1rem !important;
+  margin: -2rem -1rem !important;
+}

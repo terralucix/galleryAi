@@ -1,0 +1,106 @@
+/* Animaciones base */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255,255,255,0.8),
+                 0 0 30px rgba(255,255,255,0.6),
+                 0 0 40px rgba(255,255,255,0.4);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+  }
+}
+
+/* Estilos específicos para cada título */
+.title-animation-1 {
+  animation: fadeInDown 1s ease-out, glowPulse 3s infinite;
+  background: linear-gradient(45deg, #FF3366, #FF6B6B, #4ECDC4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: fadeInDown 1s ease-out, gradientFlow 5s ease infinite;
+}
+
+.title-animation-2 {
+  animation: slideInLeft 1s ease-out;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5),
+               0 0 20px rgba(255,255,255,0.3),
+               0 0 30px rgba(255,255,255,0.2);
+}
+
+.title-animation-3 {
+  animation: scaleIn 1s ease-out;
+  background: linear-gradient(90deg, #4ECDC4, #556270);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.title-animation-4 {
+  animation: fadeInDown 1s ease-out;
+  background: linear-gradient(135deg, #FF6B6B, #4ECDC4, #45B7D1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: slideInLeft 1s ease-out, gradientFlow 8s ease infinite;
+}
+
+.title-animation-5 {
+  animation: scaleIn 1s ease-out, glowPulse 3s infinite;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* Estilos para subtítulos */
+.subtitle-animation {
+  animation: fadeInDown 1s ease-out 0.3s backwards;
+  opacity: 0.8;
+}

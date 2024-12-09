@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/src/styles/gallery.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="fixed top-2 left-1/2 -translate-x-1/2 z-50">
+      <div class="bg-white/10 backdrop-blur-md rounded-full px-6 py-3 flex space-x-6">
+        <a href="/" class="text-white hover:text-gray-300 transition-colors">Inicio</a>
+        <a href="/gallery1" class="text-white hover:text-gray-300 transition-colors">Galería 1</a>
+        <a href="/gallery2" class="text-white hover:text-gray-300 transition-colors">Galería 2</a>
+        <a href="/gallery3" class="text-white hover:text-gray-300 transition-colors">Galería 3</a>
+        <a href="/gallery4" class="text-white hover:text-gray-300 transition-colors">Galería 4</a>
+        <a href="/gallery5" class="text-white hover:text-gray-300 transition-colors">Galería 5</a>
+        <a href="/gallery7" class="text-white hover:text-gray-300 transition-colors">Galería 7</a>
+        <a href="/gallery8" class="text-white hover:text-gray-300 transition-colors">Galería 8</a>
+      </div>
+    </nav>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

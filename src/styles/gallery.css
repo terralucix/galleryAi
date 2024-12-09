@@ -1,0 +1,132 @@
+/* Estilos base para todas las galerías */
+.gallery-container {
+  @apply min-h-screen bg-gradient-to-br from-purple-900 via-black to-indigo-900;
+}
+
+.gallery-title {
+  @apply text-center pt-16 pb-8;
+}
+
+.gallery-title h1 {
+  @apply text-6xl font-bold mb-4;
+}
+
+.gallery-title p {
+  @apply text-xl text-gray-300;
+}
+
+/* Animaciones de título compartidas */
+.title-animation-base {
+  animation: neonGlow 1.5s ease-in-out infinite alternate;
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Variaciones de color para cada galería */
+.title-animation-1 {
+  @apply title-animation-base;
+  background-image: linear-gradient(to right, #FF3366, #FF6B6B, #4ECDC4);
+}
+
+.title-animation-2 {
+  @apply title-animation-base;
+  background-image: linear-gradient(to right, #4ECDC4, #556270, #4ECDC4);
+}
+
+.title-animation-3 {
+  @apply title-animation-base;
+  background-image: linear-gradient(to right, #FF6B6B, #4ECDC4, #45B7D1);
+}
+
+.title-animation-4 {
+  @apply title-animation-base;
+  background-image: linear-gradient(to right, #7C3AED, #2563EB, #7C3AED);
+}
+
+.title-animation-5 {
+  @apply title-animation-base;
+  background-image: linear-gradient(to right, #EC4899, #8B5CF6, #EC4899);
+}
+
+.title-animation-7 {
+  @apply title-animation-base;
+  background-image: linear-gradient(to right, #F59E0B, #EF4444, #F59E0B);
+}
+
+.title-animation-8 {
+  @apply title-animation-base;
+  background-image: linear-gradient(to right, #00ffff, #4169e1, #00ffff);
+}
+
+@keyframes neonGlow {
+  from {
+    text-shadow: 0 0 10px rgba(255,255,255,0.5),
+                 0 0 20px rgba(255,255,255,0.3),
+                 0 0 30px rgba(255,255,255,0.2);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255,255,255,0.6),
+                 0 0 30px rgba(255,255,255,0.4),
+                 0 0 40px rgba(255,255,255,0.3);
+  }
+}
+
+/* Estilos compartidos para Swiper */
+.swiper-container {
+  @apply h-[60vh] px-8;
+}
+
+.swiper-slide {
+  @apply relative overflow-hidden rounded-lg;
+}
+
+.swiper-slide img {
+  @apply w-full h-full object-cover transition-transform duration-300;
+}
+
+.slide-content {
+  @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent 
+         opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+}
+
+.slide-title {
+  @apply absolute bottom-8 left-8 transform translate-y-4 group-hover:translate-y-0 
+         transition-transform duration-300 text-3xl font-bold text-white;
+}
+
+/* Miniaturas compartidas */
+.thumbnails-grid {
+  @apply grid grid-cols-5 gap-4 px-8 pt-8;
+}
+
+.thumbnail {
+  @apply relative aspect-video rounded-lg overflow-hidden cursor-pointer 
+         transform transition-transform duration-300 hover:scale-105;
+}
+
+.thumbnail-overlay {
+  @apply absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 
+         transition-opacity duration-300 flex items-center justify-center;
+}
+
+/* Controles de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-white bg-black/30 w-12 h-12 rounded-full 
+         backdrop-blur-sm transition-all duration-300;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  @apply bg-black/50 scale-110;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white/50 transition-all duration-300;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-white scale-125;
+}
